@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <title>Toastmasters</title>
+    
+    <nav>Toastmaster</nav>
+
+
+<body>
+   
+    <h1> Cargos <br> {{time.strftime('%d/%m/%Y')}}</h1>
+
+
+
+    <div id="uno">
+
+     <section  class="cargo1"><h2>Campanero</h2> <img src="{{url_for('static', filename='images/Campanero.png')}}">
+     <h2>Gramatical</h2> <img src="{{url_for('static', filename='images/E.Gramatical.png')}}">
+     <h2>E. Gemeral</h2> <img src="{{url_for('static', filename='images/Evaluador General.png')}}"></section>
+     <section class="cargo2"><h2>Cronometrador</h2> <img src="{{url_for('static', filename='images/Cronometrador.png')}}">
+     <h2>D. de Temas</h2> <img src="{{url_for('static', filename='images/D.Temas_Improvisados.png')}}">
+     <h2>Toastmaster</h2> <img src="{{url_for('static', filename='images/Toastmaster.png')}}"></section>
+     <section class="cargo3"><h2>Educativa</h2> <img src="{{url_for('static', filename='images/Educativa.png')}}"></section>
+    
+    
+    
+    </div>
+    <div class="boton"><button onclick="alert('Nuevos cargos asignados')"> DELEGAR</button></div>
+
+    
+    </body>
+
+    
+
+
+</html>
