@@ -10,7 +10,10 @@ background-color: white;
     --gris: #e8e8e8;
   }
   
-h1{text-align: center;}
+.fecha{
+    text-align: center;
+    font-size: 30   px;
+}
 #uno.cargo1,#uno.cargo2,#uno.cargo3
 {
     
@@ -44,7 +47,8 @@ h1{text-align: center;}
 
 .cargo3  {
     display: flex;
-    
+    flex-direction: column;
+    justify-content: center;
      align-items:center;
 }
 .cargo1  img,.cargo2 img,.cargo3 img{
@@ -58,7 +62,7 @@ h1{text-align: center;}
 .cargo1 h2 img .cargo2 h2 img,.cargo3 h2 img{
     width: 100%;
     height: 60%;
-    
+    border-radius: 10px;
 }
 
 .cargo1 h2,.cargo2 h2, .cargo3 h2{
@@ -69,8 +73,8 @@ h1{text-align: center;}
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    height: 33.3%;
-    border: 3px solid var(--gris)  ;
+    height: 32.7%;
+    border: 4px solid var(--gris)  ;
   
 }
     
@@ -78,24 +82,48 @@ h1{text-align: center;}
 
 
 
-.boton{
-        width: 100vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
 
-    }
-button{position: absolute;
+button{
+    
 
     width: 10vw;
     height: 5vh;
-    margin-top: 5vh;
+    margin-top: 200px;
+    position: static;
 
-    border-radius: 20px;
-     align-items: center;}
+    
+     }
 
 p{font-weight: normal;
     font-size: .9em;}
    
+.titulo{
+    width: 18vw;
+    border-radius: 7px;
+    text-align:center;
+    font-size: 27px;
+    font-weight: 800;
+    height: 4.2vh;
+    margin-top: 2.5px;
+    
+   
+}
+nav{display: flex;
+    height: 5vh;
+justify-content:center}
 
+.logo{
+    position: relative;
+    width: 50px;
+    height: 40px;
+   border-radius: 7px;
+    
+    
+}
+.img-fluid{
+    border-radius: 7px;
+    
 
+    filter:brightness(1.1);
+    mix-blend-mode:multiply;
+}

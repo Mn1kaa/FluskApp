@@ -3,11 +3,12 @@
 #Flask
 
 from flask import Flask
+from flask_bootstrap import Bootstrap
 import  datetime
 from flask import request, make_response, redirect,render_template  # Usado para obtener IP, redireccionar y renderizar los templates... 
 
 app= Flask(__name__)
-
+bootsrap = Bootstrap(app)
 @app.errorhandler(404)
 
 def not_found(error):
