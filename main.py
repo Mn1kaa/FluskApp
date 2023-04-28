@@ -8,6 +8,12 @@ from flask import request, make_response, redirect,render_template  # Usado para
 
 app= Flask(__name__)
 
+@app.errorhandler(404)
+
+def not_found(error):
+    return render_template('404.html',error=error)
+
+
 @app.route('/')  ## route recibe la ruta donde queremos correr la función
 def Toastmaster():
     IP=request.cookies.get('user_ip')
