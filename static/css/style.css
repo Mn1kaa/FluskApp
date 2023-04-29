@@ -35,14 +35,11 @@ background-color: white;
    justify-content: space-around;
    background-color: var(--rojo_oscuro);
    border-radius: 3%;
+    
+}
 
-   
-    
-    
-   
-    
-   
-    
+.fecha{
+    font-size: 3em;
 }
 
 .cargo3  {
@@ -52,8 +49,10 @@ background-color: white;
      align-items:center;
 }
 .cargo1  img,.cargo2 img,.cargo3 img{
-    width: 200px;
+    width: 160px;
     height: 150px;
+    filter:brightness(1.1);
+    mix-blend-mode:multiply;
     
     
    
@@ -63,6 +62,7 @@ background-color: white;
     width: 100%;
     height: 60%;
     border-radius: 10px;
+    
 }
 
 .cargo1 h2,.cargo2 h2, .cargo3 h2{
@@ -102,14 +102,15 @@ p{font-weight: normal;
     border-radius: 7px;
     text-align:center;
     font-size: 27px;
-    font-weight: 800;
-    height: 4.2vh;
-    margin-top: 2.5px;
+    font-weight: 600;
+    height: 4.1vh;
+    margin-top: 7px;
+    font-family: var(--bs-font-sans-serif);
     
    
 }
 nav{display: flex;
-    height: 5vh;
+    height: 5.9vh;
 justify-content:center}
 
 .logo{
@@ -126,4 +127,15 @@ justify-content:center}
 
     filter:brightness(1.1);
     mix-blend-mode:multiply;
+}
+
+
+figure{
+    font-size: 2em;
+    text-align: center;
+    color: var(--rojo_oscuro);
+}
+figure .blockquote{
+    font-size: 2em;
+
 }
