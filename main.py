@@ -2,13 +2,16 @@
 
 #Flask
 
-from flask import Flask
+from flask import Flask,session
 from flask_bootstrap import Bootstrap
 import  datetime
 from flask import request, make_response, redirect,render_template  # Usado para obtener IP, redireccionar y renderizar los templates... 
 
 app= Flask(__name__)
 bootsrap = Bootstrap(app)
+
+app.config['SECRET_KEY']= 'Secreto'
+
 @app.errorhandler(404)
 
 def not_found(error):
@@ -17,14 +20,23 @@ def not_found(error):
 
 @app.route('/')  ## route recibe la ruta donde queremos correr la función
 def Toastmaster():
-    IP=request.cookies.get('user_ip')
+    # IP=request.cookies.get('user_ip')   // cookie sin seguridad
+
+    
     now = datetime.datetime.now()
+   
 
     return render_template('index.html',time=now)
 
 @app.route('/miembros')
 def Socios():
-    user_ip= request.remote_addr
+    
     response= make_response(redirect('/'))
-    response.set_cookie('user_ip',user_ip)
+    user_ip = request.remote_addr
+    session['user_ip']= user_ip
+    
+    user_ip=session.get(user_ip)  
+    
+    
+    # response.set_cookie('user_ip',user_ip)
     return response

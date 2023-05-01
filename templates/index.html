@@ -11,13 +11,22 @@
     <title>Toastmasters</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    
-    <nav  style="background-color: #e8e8e8;">
-        <nav class="titulo">Toastmasters
-            <div class="logo"><img src="{{url_for('static', filename='images/international.png')}}" class="img-fluid" alt="Imagen_logo"></div>
-        </nav> 
+    <div class="flex">
+      <nav  class ="nav"style="background-color: #e8e8e8;">
         
-    </nav>
+        <div class="titulo"> 
+        <nav class="nada"><img src="{{url_for('static', filename='images/toasmaster_L_letras.png')}}">
+        
+              
+              
+          </nav> 
+        </div> 
+          
+      </nav>
+      
+      
+    </div>
+    
     <span class="placeholder col-12"></span>
 
 
@@ -41,7 +50,16 @@
      <section  class="cargo1"><h2>Campanero<img src="{{url_for('static', filename='images/Campanero2.png')}}"><p>Ulises</p></h2> 
      <h2>E.Gramatical<img src="{{url_for('static', filename='images/E.Gramatical.png')}}"><p>Paco</p></h2> 
      <h2>E.General<img src="{{url_for('static', filename='images/Evaluador General.png')}}"><mark>Reyna</mark></h2> </section>
-     <section class="cargo3"><h2>Toastmaster<img src="{{url_for('static', filename='images/Toastmaster.png')}}"><p>Julio</p></h2> <button type="button" class="btn btn-outline-secondary">Delegar</button></section>
+     <section class="cargo3">
+        <h2>Toastmaster
+            <img src="{{url_for('static', filename='images/Toastmaster.png')}}">
+              <p>Julio</p>
+            </h2> 
+                <button type="button" class="btn btn-outline-secondary">Delegar</button>
+                <div class="logo">
+                  <img src="{{url_for('static', filename='images/toastmaster_logo.png')}}" class="img-fluid" alt="Imagen_logo">
+                </div>
+      </section>
      <section class="cargo2"><h2>Cronometrador<img src="{{url_for('static', filename='images/Semaforo2.png')}}"><p>Agustin</p></h2> 
      <h2>D. de Temas<img src="{{url_for('static', filename='images/D.Temas_Improvisados.png')}}"><p>Brian</p></h2> 
      <h2>Educativa<img src="{{url_for('static', filename='images/Educativa.png')}}"><p>Pepe</p></h2> </section>
@@ -56,6 +74,7 @@
     
     </body>
     <span class="placeholder col-12"></span>
+    
 
     <!-- <table class="table table-secondary"> 
         <thead>
