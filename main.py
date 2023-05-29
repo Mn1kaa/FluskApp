@@ -6,7 +6,9 @@ from flask import Flask,session
 from flask_bootstrap import Bootstrap
 import  datetime
 from flask import request, make_response, redirect,render_template  # Usado para obtener IP, redireccionar y renderizar los templates... 
-
+from flask import FlaskForm
+from wtforms.fields import StringField,PasswordField,SubmitField()
+from wtforms.validators import DataRequired
 app= Flask(__name__)
 bootsrap = Bootstrap(app)
 
@@ -40,3 +42,8 @@ def Socios():
     
     # response.set_cookie('user_ip',user_ip)
     return response
+
+class NewMember(FlaskForm):
+    new_user= StringField('Nombre del nuevo miembro',validators=DataRequired())
+    password = PasswordField('Contraseña de registro',validators=(DataRequired))
+    create_user=SubmitField('Agregar Miembro')
