@@ -1,0 +1,30 @@
+{%    extends 'index.html'   %}
+
+{% from 'bootstrap/form.html' import render_form as render_form %}
+
+{% block content %}
+{% for message  in get_flashed_messages() %}
+        
+
+<div class="container" >
+    <div class="alert alert-success alert-dismissible">
+        {{message}}
+        <button  class="btn btn-succes position-absolute top-0 end-0"  type="button" data-dismiss="alert" class="close"> &times;</button>
+        
+       
+    </div>
+    
+    {% endfor%}
+   
+    {{ render_form(new_member) }}
+
+    
+</div>
+
+
+{% block scripts%}
+{{bootstrap.load_js()}}
+{% endblock %}
+
+
+{% endblock content %}
