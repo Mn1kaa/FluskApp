@@ -1,0 +1,23 @@
+{%    extends 'index.html'   %}
+
+{% from 'bootstrap/form.html' import render_form as render_form %}
+
+{% block content %}
+{% for message  in get_flashed_messages() %}
+    
+{%endfor%}
+
+
+{% block scripts%}
+{{bootstrap.load_js()}}
+{% endblock %}
+
+
+{% endblock content %}
+
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>

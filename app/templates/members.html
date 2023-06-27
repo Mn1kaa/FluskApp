@@ -7,14 +7,26 @@
         
 
 <div class="container" >
+
+    {% if contraseña=="DTM_Veracruz_2023" %}
     <div class="alert alert-success alert-dismissible">
         {{message}}
         <button  class="btn btn-succes position-absolute top-0 end-0"  type="button" data-dismiss="alert" class="close"> &times;</button>
         
        
     </div>
+    {%else%}
+
     
+    <div class="alert alert-danger alert-dismissible">
+        {{message}}
+        <button  class="btn btn-danger position-absolute top-0 end-0"  type="button" data-dismiss="alert" class="close"> &times;</button>
+        
+       
+    </div>
+    {% endif %}
     {% endfor%}
+    
    
     {{ render_form(new_member) }}
 

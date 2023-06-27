@@ -21,3 +21,8 @@ class MainTest(TestCase):
     def test_index_template(self):
         response =self.client.get(url_for('Toastmaster'))
         self.assert200(response)
+
+    def test_auth_bluenprint_exists(self):
+        self.assertIn('auth',self.app.blueprints)
+    def test_auth_login_get(self):
+        response= self.client.get(url_for('auth.login'))
