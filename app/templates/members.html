@@ -1,37 +1,63 @@
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/css/"
+/>
 {%    extends 'index.html'   %}
 
 {% from 'bootstrap/form.html' import render_form as render_form %}
 
+
 {% block content %}
-{% for message  in get_flashed_messages() %}
-        
 
-<div class="container" >
 
-    {% if contraseña=="DTM_Veracruz_2023" %}
-    <div class="alert alert-success alert-dismissible">
-        {{message}}
-        <button  class="btn btn-succes position-absolute top-0 end-0"  type="button" data-dismiss="alert" class="close"> &times;</button>
-        
-       
-    </div>
-    {%else%}
+
 
     
-    <div class="alert alert-danger alert-dismissible">
-        {{message}}
-        <button  class="btn btn-danger position-absolute top-0 end-0"  type="button" data-dismiss="alert" class="close"> &times;</button>
+    
+   <div class="flex-column d-flex justify-content-sm-center align-items-center mt-3 ">
+    <button type="button" class="btn btn-dark position-relative mb-2">
+        <a class="a" href="{{url_for('Toastmaster')}}">Regresar al Inicio</a>
+        </button>
         
        
+       <div class="d-flex justify-content-sm-center  ">{{ render_form(new_member) }}</div>
     </div>
+    {% for message  in get_flashed_messages() %}
+        
+
+    <div class="container d-flex justify-content-sm-center align-items-center" >
+        {% if contraseña=="DCP_DTM_VERACRUZ" %}
+        
+        <div class="alert alert-success alert-dismissible  mt-5">
+            {{message}}
+            <button  class="btn btn-succes position-absolute top-0 end-0" style="width: 40px; height: 57px;"  type="button" data-dismiss="alert" class="close"> &times;</button>
+            
+        </div>
+        {%else%}
+
+        
+        <div class="alert alert-danger alert-dismissible mt-5">
+            {{message}}
+            <button  class="btn btn-danger position-absolute top-0 end-0" style="width: 40px; height: 57px;"  type="button" data-dismiss="alert" class="close"> &times;</button>
+            
+        
+        </div>
+        {% endif %}
+        {% endfor%}
+    </div>
+    
+    
+    <p class="d-flex justify-content-sm-center mt-5">CONTRASEÑA DE REGISTRO=<strong>DCP_DTM_VERACRUZ</strong></p>
+
+    {% if error %}
+
+    <p class="d-flex justify-content-sm-center mt-5"> <strong>USUARIO YA REGISTRADO ANTERIORMENTE PRUEBA CON OTRO NOMBRE </strong></p>
     {% endif %}
-    {% endfor%}
     
-   
-    {{ render_form(new_member) }}
 
     
-</div>
+
+    
 
 
 {% block scripts%}

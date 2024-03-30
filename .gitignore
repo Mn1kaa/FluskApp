@@ -47,6 +47,7 @@ MANIFEST
 pip-log.txt
 pip-delete-this-directory.txt
 
+
 # Unit test / coverage reports
 htmlcov/
 .tox/
@@ -88,6 +89,7 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+.ipynb
 
 # IPython
 profile_default/
@@ -138,3 +140,9 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+#Connection
+
+config.py
+sh.pem
+ignoree.py
