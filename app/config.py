@@ -1,0 +1,17 @@
+import os
+from dotenv import load_dotenv
+
+
+load_dotenv()
+DB_USER=os.environ.get("DB_USER")
+DB_PASS=os.environ.get("DB_PASS")
+DB_HOST=os.environ.get("DB_HOST")
+DB_NAME=os.environ.get("DB_NAME")
+DB_SSL=os.environ.get("DB_SSL")
+SECRET_K=os.environ.get("SECRET_K")
+
+class Config:
+    SECRET_KEY=f"{SECRET_K}"
+
+    SQLALCHEMY_DATABASE_URI=f"mysql://{DB_USER}:{DB_PASS}@{DB_HOST}/{DB_NAME}?ssl_cert={DB_SSL}"
+    SQLALCHEMY_TRACK_MODIFICATIONS=True
