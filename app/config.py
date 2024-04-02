@@ -10,23 +10,24 @@ DB_HOST=os.environ.get("DB_HOST")
 DB_NAME=os.environ.get("DB_NAME")
 DB_SSL=os.environ.get("DB_SSL")
 SECRET_K=os.environ.get("SECRET_K")
-print(f"{{DB_HOST}},{DB_NAME},{DB_SSL},{DB_PASS},{DB_USER},{SECRET_K}","5"*50)
+
 
 path=os.getcwd()
 
+
 path=path.split()
 
-path2=f"{path[0]}\\{DB_SSL}"
+path2=f"{path[0]}/{DB_SSL}"
 print(path)
 print(path2)
-print(os.environ)
+
 
 
 
 
 class Config:
     SECRET_KEY=f"{SECRET_K}"
-    SQLALCHEMY_DATABASE_URI=f"mysql+pymysql://{DB_USER}:{DB_PASS}@{DB_HOST}/{DB_NAME}?ssl_ca={DB_SSL}"
+    SQLALCHEMY_DATABASE_URI=f"mysql+pymysql://{DB_USER}:{DB_PASS}@{DB_HOST}/{DB_NAME}?ssl_ca={path2}"
 
     SQLALCHEMY_TRACK_MODIFICATIONS=True
     
