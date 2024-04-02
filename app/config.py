@@ -17,8 +17,8 @@ path=os.getcwd()
 
 path=path.split()
 
-path2=f"{path[0]}{DB_SSL}"
-print(path)
+path2=f"{DB_SSL}"
+
 print(path2)
 
 
