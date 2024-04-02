@@ -15,7 +15,7 @@ SECRET_K=os.environ.get("SECRET_K")
 path=os.getcwd()
 
 
-path=path.split()
+
 
 path2=f"{path}\\{DB_SSL}"
 
