@@ -48,7 +48,7 @@ def probando():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=os.environ.get("PORT"))
+    app.run(host=os.environ.get("HOSTNAME"), port=os.environ.get("PORT"))
 
 
 
