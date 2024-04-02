@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 
 
 load_dotenv()
-os.environ.update(os.environ)
+
 DB_USER=os.environ.get("DB_USER")
 DB_PASS=os.environ.get("DB_PASS")
 DB_HOST=os.environ.get("DB_HOST")
@@ -11,15 +11,6 @@ DB_NAME=os.environ.get("DB_NAME")
 DB_SSL=os.environ.get("NIX_SSL_CERT_FILE")
 SECRET_K=os.environ.get("SECRET_K")
 
-
-path=os.getcwd()
-
-
-
-
-path2=f"{path}/{DB_SSL}"
-
-print(DB_SSL)
 
 
 

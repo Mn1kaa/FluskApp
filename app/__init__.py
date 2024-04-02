@@ -8,10 +8,6 @@ import os
 from .auth import auth
 
 from .config import Config
-from . import config
-os.environ.update(os.environ)
-
-
 
 
 app= Flask(__name__)
