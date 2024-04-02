@@ -18,6 +18,7 @@ path=path.split()
 path2=f"{path[0]}\\{DB_SSL}"
 print(path)
 print(path2)
+print(os.environ)
 
 
 

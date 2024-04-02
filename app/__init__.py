@@ -3,12 +3,14 @@
 from flask import Flask
 from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
-
+import os
 
 from .auth import auth
 
 from .config import Config
 from . import config
+os.environ.update(os.environ)
+print(os.environ)
 
 
 
