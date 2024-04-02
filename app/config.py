@@ -10,6 +10,7 @@ DB_HOST=os.environ.get("DB_HOST")
 DB_NAME=os.environ.get("DB_NAME")
 DB_SSL=os.environ.get("DB_SSL")
 SECRET_K=os.environ.get("SECRET_K")
+print(f"{{DB_HOST}},{DB_NAME},{DB_SSL},{DB_PASS},{DB_USER},{SECRET_K}","5"*50)
 
 path=os.getcwd()
 
