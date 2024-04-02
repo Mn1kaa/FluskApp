@@ -2,14 +2,18 @@
 
 from flask import Flask
 from flask_bootstrap import Bootstrap
+from flask_sqlalchemy import SQLAlchemy
+
 
 from .auth import auth
-from flask_sqlalchemy import SQLAlchemy
+
 from .config import Config
-import sqlalchemy.dialects.mysql
+
 
 
 app= Flask(__name__)
+
+
 app.config.from_object(Config)
 db=SQLAlchemy(app)
 
