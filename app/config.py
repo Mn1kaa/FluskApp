@@ -17,9 +17,9 @@ path=os.getcwd()
 
 
 
-path2=f"{path}\\{DB_SSL}"
 
-print(path2)
+
+print(os.environ)
 
 
 
