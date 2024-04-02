@@ -17,7 +17,7 @@ path=os.getcwd()
 
 path=path.split()
 
-path2=f"{DB_SSL}"
+path2=f"{path}\\{DB_SSL}"
 
 print(path2)
 
