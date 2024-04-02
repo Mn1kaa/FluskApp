@@ -12,6 +12,8 @@ from flask import (
 )  # Usado para obtener IP, redireccionar y renderizar los templates...W
 import unittest
 from app import create_app
+import os
+print(os.environ)
 
 
 
@@ -44,6 +46,9 @@ def probando():
     return response
 
 
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8080)
 
 
 
