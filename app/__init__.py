@@ -8,6 +8,7 @@ from flask_sqlalchemy import SQLAlchemy
 from .auth import auth
 
 from .config import Config
+import config
 
 
 
