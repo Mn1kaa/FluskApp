@@ -45,7 +45,7 @@
         </blockquote>
         <figcaption class="blockquote-footer">
           {{time.strftime('%d/%m/%Y')}}<i class="bi bi-calendar-week"></i>
-          <cite title="Source Title"> No faltes</cite>
+          <cite title="Source Title">No faltes</cite>
         </figcaption>
         <button type="button" class="btn btn-dark position-relative">
             <a class="a"href="{{url_for('members.AddUser')}}">REGISTRAR MIEMBRO</a>
@@ -58,7 +58,7 @@
       
      
       <div id="uno">
-        <section class="cargo1">
+        <section class="cargo">
           <h2>
             Campanero<img
               src="{{url_for('static', filename='images/Campanero2.png')}}"
@@ -77,7 +77,7 @@
             /><p>{{members.persona2}}</p>
           </h2>
         </section>
-        <section class="cargo3">
+        <section class="cargo">
           <h2>
             Toastmaster
             <img
@@ -87,7 +87,7 @@
           </h2>
           
           <script>   async function  api(){
-            const plantilla=  await fetch('http://127.0.0.1:5000/members/chosenMembers')
+            const plantilla=  await fetch('https://flaskapp-production-31af.up.railway.app/members/chosenMembers')
             const plantilla2=await plantilla.json()
             return plantilla2
 
@@ -111,12 +111,12 @@
           <div class="logo">
             <img 
               src="{{url_for('static', filename='images/toastmaster_logo.png')}}"
-              class="img-fluid"
+              class=""
               alt="Imagen_logo"
             />
           </div>
         </section>
-        <section class="cargo2">
+        <section class="cargo">
           <h2>
             Cronometrador<img
               src="{{url_for('static', filename='images/Semaforo2.png')}}"

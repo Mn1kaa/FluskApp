@@ -15,7 +15,6 @@ SECRET_K=os.environ.get("SECRET_K")
 
 
 
-
 class Config:
     SECRET_KEY=f"{SECRET_K}"
     SQLALCHEMY_DATABASE_URI=f"mysql+pymysql://{DB_USER}:{DB_PASS}@{DB_HOST}/{DB_NAME}?ssl_ca={DB_SSL}"
