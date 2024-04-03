@@ -170,7 +170,9 @@ figure .blockquote{
     
 }
 @media (max-width: 500px){
-    button{width:25vw;}
+    button{width:25vw;
+        height: 20vh;}
+
     #uno{
         height: 40vh;
     }    
@@ -178,13 +180,13 @@ figure .blockquote{
       
     
         img{width: 100%;
-            margin-top: 1em;
+            
           background-color: transparent;
       height: 45%;}
       h2{width: 75%;
           border-radius: 10px;
       height: 20%;
-  font-size:.7em;
+  font-size:.6em;
   text-align: center;}
        }
        p{
