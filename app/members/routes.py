@@ -1,6 +1,6 @@
 
 from . import members
-from flask import render_template
+from flask import render_template,abort
 from flask import request,session,flash
 from models.socio import socio
 from app.forms import NewMember
@@ -89,7 +89,9 @@ def chosen_members():
     array_members=db.session.query(socio.name).all()
     now = datetime.datetime.now()
     longitud_arreglo_nombres=len(array_members)
-    while len(arreglo_nombres_aleatorio)<=7:
+    if len(array_members)<6:
+        return {'plantilla':'Error'}
+    while len(arreglo_nombres_aleatorio)<=6:
         numero_aleatorio=random.randint(0,longitud_arreglo_nombres-1    )
         if not array_members[numero_aleatorio] in arreglo_nombres_aleatorio:
             arreglo_nombres_aleatorio.append(array_members[numero_aleatorio])

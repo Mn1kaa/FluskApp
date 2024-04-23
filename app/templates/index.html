@@ -99,7 +99,7 @@
 
           
 
-          <button onclick="api().then(data=> document.body.innerHTML=data.plantilla)"
+          <button onclick="api().then(data=> {if(data.plantilla='Error'){console.log('Faltan usuarios por registrar')}else {document.body.innerHTML=data.plantilla}}).catch(error=>console.log(error.meesage))"
             type="button"
             class="btn btn-outline-secondary"
           >Delegar
