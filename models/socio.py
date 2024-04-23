@@ -1,5 +1,5 @@
 from app import db
-from sqlalchemy import Sequence
+
 
 
 class socio(db.Model):
